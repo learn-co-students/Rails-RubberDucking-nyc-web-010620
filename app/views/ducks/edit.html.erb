@@ -1,0 +1,7 @@
+<h1>Edit a Duck</h1>
+<%= form_for @duck do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :description %>
+<%= f.collection_select(:student_id, Student.all, :id, :name) %>
+<%= f.submit %>
+<% end %>
