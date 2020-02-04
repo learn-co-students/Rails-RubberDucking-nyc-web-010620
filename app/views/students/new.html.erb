@@ -1,0 +1,11 @@
+<% if flash.now[:message]%>
+<%= @student.errors.full_messages[0] %>
+<% end %>
+
+
+<h1>Create a Student</h1>
+<%= form_for @student do |f| %>
+<%= f.text_field :name %>
+<%= f.number_field :mod%>
+<%= f.submit %>
+<% end %>
