@@ -1,0 +1,10 @@
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+<h1><%= @student.name %></h1>
+<h2><%= @student.mod %></h2>
+
+<% @student.ducks.each do |duck| %>
+<h3><%= duck.name %></h3>
+<% end %>

@@ -1,0 +1,14 @@
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+<h1>Student Create Form</h1>
+
+<%= form_for @student do |f|%>
+<label>Name:</label><br>
+<%= f.text_field :name %><br>
+
+<label>Mod:</label><br>
+<%= f.number_field :mod %><br>
+<%= f.submit %>
+<% end %>
