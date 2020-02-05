@@ -1,0 +1,7 @@
+
+<%=form_for @duck do |f| %>
+    Duck Name:            <%= f.text_field :name %><br />
+     Description:         <%= f.text_field :description %><br />
+     Choose student name: <%=f.collection_select :student_id, Student.all, :id, :name%>
+     <%= f.submit "Create Duck"%>
+   <%end%>

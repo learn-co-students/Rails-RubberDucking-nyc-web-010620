@@ -1,0 +1,13 @@
+<h1><%=@duck.name%>'s details</h1>
+<h3>Description: <%=@duck.description%></h3>
+<h3>Student name: <%= link_to @duck.student.name, student_path(@duck.student)%></h3>
+
+<% if flash[:message]%>
+<%=flash[:message]%>
+<%end%>
+
+<%= form_tag duck_path(@duck.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@duck.name}" %>
+<% end %>
+
+<%= button_to "Delete #{@duck.name} another way", duck_path(@duck), action: "delete", method: :delete, id: @duck.id%>
