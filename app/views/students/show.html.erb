@@ -1,0 +1,11 @@
+<h1>Name: <%=@student.name%></h1>
+<h3>Mod: <%=@student.mod%></h1>
+
+ <%@student.ducks.map do |duck|%>
+    Ducks: <li><%= duck.name %></li>
+<%end%>
+
+<%= button_to "Delete Student", student_path(@student), action: "delete", method: :delete, id: @student.id %>
+
+
+
