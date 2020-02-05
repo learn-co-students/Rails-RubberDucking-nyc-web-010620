@@ -1,0 +1,10 @@
+<h1><%=@duck.name%></h1>
+<br>
+<%=@duck.description%>
+
+<h3> Students Working w/ </h3>
+<ul>
+  <% @students.each do |student| %>
+    <li><i> <%= student.name %> </i></li>
+  <% end %>
+</ul>

@@ -1,0 +1,9 @@
+<h1>Log New Duck</h2>
+
+<%= form_for @duck do |f| %> 
+    Name: <%= f.text_field :name %> 
+    Student: <%= f.collection_select :student_id, Student.all, :id, :name %>
+    <br>
+    Description: <%= f.text_area :description %>
+    <%= f.submit %>
+<%end%>

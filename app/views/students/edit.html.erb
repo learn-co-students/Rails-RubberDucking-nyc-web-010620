@@ -1,0 +1,7 @@
+<h1>Edit <%=@student.name%></h2>
+
+<%= form_for @student do |f| %> 
+    Name: <%= f.text_field :name %> 
+    Mod: <%= f.number_field :mod %>
+    <%= f.submit %>
+<%end%>
